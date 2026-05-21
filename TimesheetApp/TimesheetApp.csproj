@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fakes\TimesheetAppFake.cs" />
     <Compile Include="Interfaces\IEmailSender.cs" />
     <Compile Include="Interfaces\IErrorLogger.cs" />
     <Compile Include="Interfaces\ITaskManager.cs" />

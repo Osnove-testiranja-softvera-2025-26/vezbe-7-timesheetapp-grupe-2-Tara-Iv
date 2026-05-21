@@ -26,6 +26,20 @@ namespace TimesheetApp
             taskManager = new TaskManager();
         }
 
+        // Additional constructor to allow dependency injection for unit testing
+        public TimeLogger(ITask task,
+                          IEmailSender emailSender,
+                          IErrorLogger errorLogger,
+                          IUserLogger userLogger,
+                          ITaskManager taskManager)
+        {
+            this.task = task;
+            this.emailSender = emailSender;
+            this.errorLogger = errorLogger;
+            this.userLogger = userLogger;
+            this.taskManager = taskManager;
+        }
+
         public void LogTime(int hours, int minutes, string description)
         {
             try
